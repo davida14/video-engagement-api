@@ -85,6 +85,7 @@ class ApiController extends Controller
 
             $item = Items::find($request->id); 
             $item->video = $full_url;
+            $item->status = true;
             $item->save();
         }
         return $full_url;
