@@ -83,9 +83,9 @@ class ApiController extends Controller
             $full_url = $destinationPath.$filename;
             $file->move($destinationPath, $filename);
 
-            /*$item = Items::find(1); id pass
+            $item = Items::find($request->id); 
             $item->video = $full_url;
-            $item->save();*/
+            $item->save();
         }
         return $full_url;
     }
